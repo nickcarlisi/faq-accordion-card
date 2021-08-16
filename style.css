@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  background-size: cover;
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--dark-grayish-blue);
+  position: relative;
+}
+
+.card {
+  width: min(90%, 1000px);
+  min-height: 509px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-inline: auto;
+  margin-top: 150px;
+  padding: 120px 12px 50px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+img {
+  /* max-width: 100%; */
+}
+
+.main-image {
+  display: none;
+}
+
+.main-image-mobile {
+  position: absolute;
+  transform: translate(-55%, -120%);
+  /* display: none; */
+}
+
+.bg-image {
+  display: none;
+}
+
+.bg-image-mobile {
+  position: absolute;
+  transform: translate(-50%, -120%);
+}
+
+.box-illustration {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--very-dark-grayish-blue);
+  /* padding-top: 40px; */
+  /* padding-top: 100px; */
+}
+
+.question-and-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.question {
+  padding: 20px 0px;
+}
+
+.arrow {
+  height: 100%;
+}
+
+.answer {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex-direction: row;
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .split {
+    flex: 50%;
+    /* overflow: hidden; */
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .question-and-arrow {
+    margin-right: 60px;
+  }
+
+  .main-image {
+    /* max-width: 100%; */
+    display: block;
+    position: absolute;
+    transform: translate(-20%, -55%);
+  }
+
+  .bg-image {
+    /* max-width: 100%; */
+    display: block;
+    position: absolute;
+    transform: translate(-60%, -55%);
+  }
+
+  .mobile-images {
+    display: none;
+  }
+
+  .box-illustration {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    transform: translate(-60%, -30%);
+  }
+}
