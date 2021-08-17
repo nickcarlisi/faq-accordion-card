@@ -21,7 +21,6 @@
 body {
   height: 100vh;
   background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
-  background-size: cover;
   font-family: "Kumbh Sans";
   font-weight: 400;
   font-size: 0.85rem;
@@ -32,7 +31,7 @@ body {
 
 .card {
   width: min(90%, 1000px);
-  min-height: 509px;
+  min-height: 60vh;
   background-color: #fff;
   border-radius: 20px;
   margin-inline: auto;
@@ -93,23 +92,42 @@ h1 {
   border-bottom: 1px solid var(--light-grayish-blue);
 }
 
+.question-and-arrow.active {
+  border-bottom: none;
+  font-weight: 700;
+}
+
 .question {
   padding: 20px 0px;
+}
+
+.question:hover {
+  color: var(--soft-red);
+  cursor: pointer;
 }
 
 .arrow {
   height: 100%;
 }
 
+.arrow.active {
+  transform: rotate(180deg);
+}
+
 .answer {
   display: none;
+}
+
+.answer.active {
+  display: block;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-grayish-blue);
 }
 
 @media screen and (min-width: 900px) {
   .card {
     flex-direction: row;
     padding: 20px;
-
     position: relative;
     overflow: hidden;
   }
@@ -127,28 +145,32 @@ h1 {
     margin-right: 60px;
   }
 
-  .main-image {
-    /* max-width: 100%; */
-    display: block;
-    position: absolute;
-    transform: translate(-20%, -55%);
-  }
-
-  .bg-image {
-    /* max-width: 100%; */
-    display: block;
-    position: absolute;
-    transform: translate(-60%, -55%);
+  .answer.active {
+    margin-right: 60px;
   }
 
   .mobile-images {
     display: none;
   }
 
+  .main-image {
+    display: block;
+    position: absolute;
+    transform: translate(-20%, -50%);
+    z-index: 2;
+  }
+
+  .bg-image {
+    display: block;
+    position: absolute;
+    transform: translate(-60%, -55%);
+    z-index: 1;
+  }
+
   .box-illustration {
     display: block;
     position: absolute;
     z-index: 100;
-    transform: translate(-60%, -30%);
+    transform: translate(-60%, -20%);
   }
 }
