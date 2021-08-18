@@ -27,6 +27,8 @@ body {
   line-height: 1.6;
   color: var(--dark-grayish-blue);
   position: relative;
+  display: grid;
+  align-content: center;
 }
 
 .card {
@@ -35,14 +37,14 @@ body {
   background-color: #fff;
   border-radius: 20px;
   margin-inline: auto;
-  margin-top: 150px;
+  margin-top: 6rem;
   padding: 120px 12px 50px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
-  position: relative;
+  /* position: relative; */
 }
 
 .container {
@@ -60,7 +62,7 @@ img {
 
 .main-image-mobile {
   position: absolute;
-  transform: translate(-55%, -120%);
+  transform: translate(-55%, -115%);
   /* display: none; */
 }
 
@@ -128,8 +130,12 @@ h1 {
   .card {
     flex-direction: row;
     padding: 20px;
-    position: relative;
-    overflow: hidden;
+    /* position: absolute; */
+    margin-top: 0;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -35rem;
+    /* overflow: hidden; */
   }
 
   .split {
@@ -153,19 +159,32 @@ h1 {
     display: none;
   }
 
+  .image-container {
+    /* background-image: url("images/bg-pattern-desktop.svg");
+    border: 1px solid red;
+    height: 100%;
+    position: relative; */
+  }
+
+  .desktop-images {
+    position: relative;
+  }
+
   .main-image {
     display: block;
     position: absolute;
     transform: translate(-20%, -50%);
     z-index: 2;
+    clip-path: inset(0 0 0 4.6rem);
   }
 
-  .bg-image {
+  /* .bg-image {
     display: block;
     position: absolute;
     transform: translate(-60%, -55%);
     z-index: 1;
-  }
+    clip-path: inset(15.25rem 0 0 35rem);
+  } */
 
   .box-illustration {
     display: block;

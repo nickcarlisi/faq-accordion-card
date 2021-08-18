@@ -19,6 +19,7 @@ questionsArrowsAnswers.forEach((questionAndAnswer) => {
         el.classList.remove("active");
       });
     });
+
     elements.forEach((el) => {
       if (el.classList.contains("active")) {
         el.classList.remove("active");
